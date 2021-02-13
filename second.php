@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <body>
 
-<?php
-ECHO "Hello World!<br>";
-echo "Hello World!<br>";
-EcHo "Hello World!<br>";
-?> 
+        <?php
+            ECHO "Hello World!<br>";
+            echo "Hello World!<br>";
+            EcHo "Hello World!<br>";
+        ?> 
 
-</body>
+    </body>
 </html>
