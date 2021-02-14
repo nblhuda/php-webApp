@@ -63,11 +63,22 @@
         // }
     ?>
         <form action="process.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $id ?>">
             <label>Name</label>
-            <input type="text" name="name" placeholder="Enter your name"><br><br>
+            <input type="text" name="name" value="<?php echo $name; ?>" placeholder="Enter your name"><br><br>
             <label for="">Location</label>
-            <input type="text" name="location" placeholder="Enter your location"><br><br>
-            <button type="submit" name="save">Save</button>
+            <input type="text" name="location" value="<?php echo $location; ?>" placeholder="Enter your location"><br><br>
+
+            <div>
+                <?php if($update == true): ?>
+                    <button type="submit" name="update">Update</button>
+
+                <?php else: ?>
+                    <button type="submit" name="save">Save</button>
+
+                <?php endif; ?>
+            </div>
+            
         </form>
     </body>
 </html>
