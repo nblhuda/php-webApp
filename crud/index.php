@@ -4,6 +4,19 @@
     <?php include 'process.php' ?>
 
     <?php
+        if(isset($_SESSION['message'])):
+    ?>
+
+    <div class="alert-<?=$_SESSION['msg_type']?>">
+            <?php 
+                echo $_SESSION['message'];
+                unset($_SESSION['message']);
+
+            ?>
+    </div>
+    <?php endif ?>
+
+    <?php
         $mysqli = new mysqli("localhost", "root", "", "crudphp") or die (mysqli_error($mysqli)); 
         $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
         //pre_r($result);
@@ -34,7 +47,8 @@
                         <td><?php echo $row['name']; ?></td>
                         <td><?php echo $row['location']; ?></td>
                         <td>
-                            <a href="process.php?delete=<?php echo $row['id']; ?>"><button>Edit</button></a>
+                            <a href="index.php?edit=<?php echo $row['id']; ?>"><button>Edit</button></a>
+                            <a href="process.php?delete=<?php echo $row['id']; ?>"><button>Delete</button></a>
                         </td>
                     </tr>
                     <?php endwhile; ?>
