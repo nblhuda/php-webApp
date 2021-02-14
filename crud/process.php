@@ -15,6 +15,7 @@
         $_SESSION['message'] = "Record has been saved!";
         $_SESSION['msg_type'] = "success";
 
+        header("location:index.php");
     }
 
     // to delete if click the button based on id 
@@ -25,6 +26,9 @@
 
         $_SESSION['message'] = "Record has been deleted!";
         $_SESSION['msg_type'] = "danger";
+
+        header("location:index.php");
+
     }
 
 ?>
