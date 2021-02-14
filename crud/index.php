@@ -33,18 +33,20 @@
                     <tr>
                         <td><?php echo $row['name']; ?></td>
                         <td><?php echo $row['location']; ?></td>
-                        <td></td>
+                        <td>
+                            <a href="process.php?delete=<?php echo $row['id']; ?>"><button>Edit</button></a>
+                        </td>
                     </tr>
                     <?php endwhile; ?>
             </table>
         </div>
         <?php
 
-        function pre_r($array){
-            echo '<pre>';
-            print_r($array);
-            echo '</pre>';
-        }
+        // function pre_r($array){
+        //     echo '<pre>';
+        //     print_r($array);
+        //     echo '</pre>';
+        // }
     ?>
         <form action="process.php" method="post">
             <label>Name</label>
