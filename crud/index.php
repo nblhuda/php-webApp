@@ -6,7 +6,15 @@
     <?php
         $mysqli = new mysqli("localhost", "root", "", "crudphp") or die (mysqli_error($mysqli)); 
         $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
-        
+        //pre_r($result);
+
+        // to fetch record nak check betul tak penyimpanan dalam db
+        // pre_r($result->fetch_assoc());
+        // pre_r($result->fetch_assoc()); 
+        // pre_r($result->fetch_assoc());
+        // pre_r($result->fetch_assoc());
+        // pre_r($result->fetch_assoc());
+        // pre_r($result->fetch_assoc());
 
         ?>
 
